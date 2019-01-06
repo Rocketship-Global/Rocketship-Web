@@ -1,4 +1,4 @@
-[![Build Status](https://travis-ci.com/heavysaturn/rocketship.svg?branch=master)](https://travis-ci.com/heavysaturn/rocketship)
+[![Build Status](https://travis-ci.com/Rocketship-Global/Rocketship-Web.svg?branch=master)](https://travis-ci.com/Rocketship-Global/Rocketship-Web)
 # Rocketship-Web
 
 The main website serving as the customers primary interface with the Rocketship services.
