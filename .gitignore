@@ -107,11 +107,15 @@ rethinkdb_data/
 # Vagrant
 .vagrant/
 
-# SASS cache
-.sass-cache/
+# Alembic
+migrations/
 
-# Node modules
-node_modules/
+# Local database
+db.sqlite3
 
-*.js.tmp
-log.*
+# ignore files in staticfiles, but keep the folder in the repo. we'll build the files locally
+staticfiles/*
+!staticfiles/.keep
+
+# Ignore the plugins
+plugins/

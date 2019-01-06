@@ -1,0 +1,34 @@
+[[source]]
+url = "https://pypi.python.org/simple"
+verify_ssl = true
+name = "pypi"
+
+[packages]
+gunicorn = "*"
+django = "*"
+django-crispy-forms = "*"
+django-simple-bulma = "*"
+pillow = "*"
+whitenoise = "*"
+
+[dev-packages]
+"flake8" = "*"
+"flake8-import-order" = "*"
+
+[requires]
+python_version = "3.7"
+
+[scripts]
+start          = "gunicorn --preload -w 12 -b 0.0.0.0:10013 rocketship.wsgi"
+lint           = "python -m flake8"
+makemigrations = "python manage.py makemigrations"
+showmigrations = "python manage.py showmigrations"
+createapp      = "python manage.py startapp"
+migrate        = "python manage.py migrate"
+test           = "python manage.py test"
+collectstatic  = "python manage.py collectstatic --noinput"
+clean          = "rm -rf __pycache__ htmlcov .coverage .pytest_cache"
+build          = "docker build -t heavysaturn/rocketship:latest -f docker/Dockerfile ."
+push           = "docker push heavysaturn/rocketship:latest"
+buildbase      = "docker build -t heavysaturn/rocketship-base:latest -f docker/Dockerfile.base ."
+pushbase       = "docker push heavysaturn/rocketship-base:latest"
