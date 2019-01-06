@@ -1,0 +1,31 @@
+FROM python:3.6-alpine3.7
+
+# Install essential system packages
+RUN apk add --update tini
+RUN apk add --update build-base
+RUN apk add --update libffi-dev
+RUN apk add --update postgresql-dev
+RUN apk add --update gcc
+RUN apk add --update musl-dev
+RUN apk add --update zlib
+RUN apk add --update jpeg-dev
+RUN apk add --update libxml2 libxml2-dev libxslt-dev
+RUN apk add --update zlib-dev
+RUN apk add --update freetype-dev
+
+# Set environment variables
+ENV PIPENV_VENV_IN_PROJECT=1
+ENV PIPENV_IGNORE_VIRTUALENVS=1
+ENV PIPENV_NOSPIN=1
+ENV PIPENV_HIDE_EMOJIS=1
+ENV PYTHONPATH=/rocketship
+
+# Make the folder and move the pipfiles into it
+RUN mkdir -p /rocketship
+COPY Pipfile /rocketship
+COPY Pipfile.lock /rocketship
+
+# Install and sync pipenv
+RUN pip install pipenv
+WORKDIR /rocketship
+RUN pipenv sync
