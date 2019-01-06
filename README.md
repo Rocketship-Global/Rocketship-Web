@@ -3,4 +3,4 @@
 
 The main website serving as the customers primary interface with the Rocketship services.
 
-Uses **Django**, **bulma**, and lots of lovely **Python**.
+Uses **Django**, **bulma**, and lots of lovely **Python**. 
