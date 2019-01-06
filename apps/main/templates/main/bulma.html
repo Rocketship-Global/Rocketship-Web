@@ -1,7 +1,10 @@
+{% load django_simple_bulma %}
+{% load static %}
+
 <!DOCTYPE html>
 <html lang="en">
     <head>
-        {% load django_simple_bulma %}
+        <!-- Bulma-related imports -->
         {% bulma %}
 
         <!-- Favicon section -->
@@ -9,14 +12,15 @@
         <link rel="icon" type="image/png" sizes="32x32" href="{% static "favicons/favicon-32x32.png" %}">
         <link rel="icon" type="image/png" sizes="16x16" href="{% static "favicons/favicon-16x16.png" %}">
         <link rel="manifest" href="{% static "favicons/site.webmanifest" %}">
-        <link rel="mask-icon" href="{% static "favicons/safari-pinned-tab.svg"%}" color="#e4a432">
-        <link rel="shortcut icon" href="{% static "favicons/favicon.ico"%}">
+        <link rel="mask-icon" href="{% static "favicons/safari-pinned-tab.svg" %}" color="#e4a432">
+        <link rel="shortcut icon" href="{% static "favicons/favicon.ico" %}">
         <meta name="msapplication-TileColor" content="#ffc40d">
-        <meta name="msapplication-config" content="{% static "favicons/browserconfig.xml"%}">
+        <meta name="msapplication-config" content="{% static "favicons/browserconfig.xml" %}">
         <meta name="theme-color" content="#ffffff">
     </head>
     <body>
-        <h1 class="is-size-1">Testing dat bulma, baby!</h1>
-        <a class="button is-primary">Primary</a>
+        <h1 class="is-size-1">Rocketship, baby!</h1>
+        <a class="button is-primary">Primary color</a>
+    <img src="{% static "favicons/android-chrome-512x512.png" %}
     </body>
 </html>
