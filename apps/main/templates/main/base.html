@@ -17,10 +17,12 @@
         <meta name="msapplication-TileColor" content="#ffc40d">
         <meta name="msapplication-config" content="{% static "favicons/browserconfig.xml" %}">
         <meta name="theme-color" content="#ffffff">
+
+        <!-- Other head stuff can go here -->
+        {% block head %} {% endblock %}
     </head>
+
     <body>
-        <h1 class="is-size-1">Rocketship, baby!</h1>
-        <a class="button is-primary">Primary color</a>
-    <img src="{% static "favicons/android-chrome-512x512.png" %}
+        {% block body %} {% endblock %}
     </body>
 </html>
