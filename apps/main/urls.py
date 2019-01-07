@@ -1,7 +1,7 @@
 from django.urls import path
 
-from . import views
+from apps.main.views import Home
 
 urlpatterns = [
-    path('', views.Home.as_view(), name='home'),
+    path('', Home.as_view(), name='home'),
 ]
